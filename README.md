@@ -20,7 +20,7 @@ You are provided with an unload for the last three days, it needs to be processe
 The data should be loaded into the storage with the following structure
 (the names of the entities are indicated essentially, without the peculiarities of the naming rules,
 indicated below):
-
+https://github.com/efimfit/AntiFraud-DWH/blob/main/%D0%91%D0%B5%D0%B7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9.jpg
 
 ### :page_facing_up: Building a report
 Based on the results of the download, it is necessary to build a showcase daily
