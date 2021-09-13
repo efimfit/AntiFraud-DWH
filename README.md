@@ -22,6 +22,19 @@ The data should be loaded into the storage with the following structure
 indicated below):
 ![](https://github.com/efimfit/AntiFraud-DWH/blob/main/%D0%91%D0%B5%D0%B7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9.jpg)
 
+### :page_facing_up: Table naming rules
+It is necessary to adhere to the following naming rules (to automate the check):
+* ITDE1. <CODE> _STG_ <TABLE_NAME> Tables for staging tables (initial load), intermediate allocation of an increment if required.
+Temporary tables, if such are required in the calculation, can also be added with this naming.
+You can choose an arbitrary name for the tables, but it is meaningful.
+* ITDE1. <CODE> _DWH_FACT_ <TABLE_NAME> Fact tables loaded into repository. The facts are the transactions themselves and the "black list" of passports.
+The name of the tables is the same as in the ER diagram.
+* ITDE1. <CODE> _DWH_DIM_ <TABLE_NAME> Dimension tables stored in SCD1 format.
+The name of the tables is the same as in the ER diagram.
+* ITDE1. <CODE> _REP_FRAUD Report table.
+* ITDE1. <CODE> _META_ <TABLE_NAME> Tables for storing metadata.
+You can choose an arbitrary name for the tables, but it is meaningful.
+
 ### :page_facing_up: Building a report
 Based on the results of the download, it is necessary to build a showcase daily
 reporting on fraudulent transactions. The showcase is built by accumulation,
@@ -36,7 +49,6 @@ operation.
 operation.
 * event_type Description of the type of fraud.
 * report_dt Time to build the report.
-
 
 ### :page_facing_up: File handling
 The uploaded files are named according to the following pattern:
@@ -53,39 +65,4 @@ moved to archive directory:
 - terminals_DDMMYYYY.xlsx.backup
 
 
-### :page_facing_up: Table naming rules
-You must adhere to the following naming rules (for check automation):
-ITDE1. <CODE> _STG_ <TABLE_NAME> Tables for placement
-staging tables
-(initial download),
-intermediate selection
-increment if required.
-Temporary tables if
-such will be required in the calculation,
-can also be folded with
-such a naming.
-You can choose the name of the tables
-arbitrary, but semantic.
-ITDE1. <CODE> _DWH_FACT_ <TABLE_NAME> Fact tables,
-uploaded to the repository. V
-facts are
-the transactions themselves and the "black
-list of passports.
-Name of tables - as in ER
-diagram.
-ITDE1. <CODE> _DWH_DIM_ <TABLE_NAME> Dimension tables,
-stored in SCD1 format.
-Name of tables - as in ER
-diagram.
-ITDE1. <CODE> _DWH_DIM_ <TABLE_NAME> _HIST Dimension tables,
-stored in SCD2 format
-(only for those who
-performs a complicated
-exercise).
-Name of tables - as in ER
-diagram.
-ITDE1. <CODE> _REP_FRAUD Report table.
-ITDE1. <CODE> _META_ <TABLE_NAME> Tables for storage
-metadata.
-You can choose the name of the tables
-arbitrary, but semantic.
+
