@@ -24,15 +24,15 @@ indicated below):
 
 ### :page_facing_up: Table naming rules
 It is necessary to adhere to the following naming rules (to automate the check):
-* ITDE1. <CODE> _STG_ <TABLE_NAME> Tables for staging tables (initial load), intermediate allocation of an increment if required.
+* ITDE1._STG_ <TABLE_NAME> Tables for staging tables (initial load), intermediate allocation of an increment if required.
 Temporary tables, if such are required in the calculation, can also be added with this naming.
 You can choose an arbitrary name for the tables, but it is meaningful.
-* ITDE1. <CODE> _DWH_FACT_ <TABLE_NAME> Fact tables loaded into repository. The facts are the transactions themselves and the "black list" of passports.
+* ITDE1._DWH_FACT_ <TABLE_NAME> Fact tables loaded into repository. The facts are the transactions themselves and the "black list" of passports.
 The name of the tables is the same as in the ER diagram.
-* ITDE1. <CODE> _DWH_DIM_ <TABLE_NAME> Dimension tables stored in SCD1 format.
+* ITDE1._DWH_DIM_ <TABLE_NAME> Dimension tables stored in SCD1 format.
 The name of the tables is the same as in the ER diagram.
-* ITDE1. <CODE> _REP_FRAUD Report table.
-* ITDE1. <CODE> _META_ <TABLE_NAME> Tables for storing metadata.
+* ITDE1._REP_FRAUD Report table.
+* ITDE1. _META_ <TABLE_NAME> Tables for storing metadata.
 You can choose an arbitrary name for the tables, but it is meaningful.
 
 ### :page_facing_up: Building a report
