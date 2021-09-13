@@ -64,5 +64,6 @@ moved to archive directory:
 - passport_blacklist_DDMMYYYY.xlsx.backup
 - terminals_DDMMYYYY.xlsx.backup
 
-
+### :page_facing_up: Шncremental loading principle
+![](https://github.com/efimfit/AntiFraud-DWH/blob/main/pictorial-view-part-12.png)
 
