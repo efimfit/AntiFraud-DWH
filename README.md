@@ -43,6 +43,7 @@ The uploaded files are named according to the following pattern:
 - transactions_DDMMYYYY.txt
 - passport_blacklist_DDMMYYYY.xlsx
 - terminals_DDMMYYYY.xlsx
+
 It is assumed that one such file comes in one day. After
 downloading the corresponding file it should be renamed to file with
 with the extension .backup so that the file is not searched for the next time and
@@ -50,3 +51,41 @@ moved to archive directory:
 - transactions_DDMMYYYY.txt.backup
 - passport_blacklist_DDMMYYYY.xlsx.backup
 - terminals_DDMMYYYY.xlsx.backup
+
+
+### :page_facing_up: Table naming rules
+You must adhere to the following naming rules (for check automation):
+ITDE1. <CODE> _STG_ <TABLE_NAME> Tables for placement
+staging tables
+(initial download),
+intermediate selection
+increment if required.
+Temporary tables if
+such will be required in the calculation,
+can also be folded with
+such a naming.
+You can choose the name of the tables
+arbitrary, but semantic.
+ITDE1. <CODE> _DWH_FACT_ <TABLE_NAME> Fact tables,
+uploaded to the repository. V
+facts are
+the transactions themselves and the "black
+list of passports.
+Name of tables - as in ER
+diagram.
+ITDE1. <CODE> _DWH_DIM_ <TABLE_NAME> Dimension tables,
+stored in SCD1 format.
+Name of tables - as in ER
+diagram.
+ITDE1. <CODE> _DWH_DIM_ <TABLE_NAME> _HIST Dimension tables,
+stored in SCD2 format
+(only for those who
+performs a complicated
+exercise).
+Name of tables - as in ER
+diagram.
+ITDE1. <CODE> _REP_FRAUD Report table.
+ITDE1. <CODE> _META_ <TABLE_NAME> Tables for storage
+metadata.
+You can choose the name of the tables
+arbitrary, but semantic.
